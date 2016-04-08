@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+	*{
+		box-sizing:border-box;
+	}
+		article{
+			width: 980px;
+			margin:0 auto;
+		}
+		fieldset{
+			border-radius: 5px;
+		}
+		.btn-group{
+			float: right;
+			display: inline-block;
+		}
+		input[type='text']{
+			width: 300px;
+			border-radius: 4px;
+		}
+		.delete{
+			background: red;
+		}
+		.result{
+			width: 980px;
+			height: 450px;
+			border: 1px solid #ccc;
+			text-align: center;
+			border-radius: 5px;
+			margin-top: 10px;
+
+		}
+		.chart{
+			display: flex;
+			align-items: flex-end;
+			justify-content: center;
+			width: 100%;
+			height: 350px;
+		}
+		.chart div{
+			display: inline-block;
+			width: 10px;
+			margin-right: 5px;
+		}
+	</style>
+</head>
+<body>
+	<article>
+		<fieldset>
+			<legend>表单输入</legend>
+			<input type="text" name="number" id="number" placeholder="请输入10~100的数">
+			<div class="btn-group">
+				<input type="button" id="left-in" value="leftIn">
+				<input type="button" id="right-in" value="rightIn">
+				<input type="button" id="left-out" class="delete" value="leftOut">
+				<input type="button" id="right-out" class="delete" value="rightOut">
+				<input type="button" id="random" value="随机产生">
+                <input type="button" id="sort" value="排序"> &nbsp;间隔&nbsp;
+                <select name="speed" id="speed">
+                	<option value="20">20</option>
+                	<option value="50">50</option>
+                	<option value="100">100</option>
+                	<option value="200">200</option>
+                </select>
+
+			</div>
+		</fieldset>
+		<div class="result">
+			<h2>冒泡排序算法可视化</h2>
+			<div class="chart"></div>
+		</div>
+	</article>
+	<script src="task2-7.js"></script>
+</body>
+</html>
